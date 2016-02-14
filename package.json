@@ -1,0 +1,23 @@
+{
+  "name": "react-components",
+  "version": "0.0.0",
+  "description": "a sandbox to test components created by react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CesarNobre/react-components.git"
+  },
+  "author": "Cesar Nobre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CesarNobre/react-components/issues"
+  },
+  "devDependencies": {
+    "webpack": "~1.12.13",
+    "style-loader": "~0.13.0",
+    "css-loader": "^0.18.0"
+  }
+}
