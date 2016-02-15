@@ -46,6 +46,8 @@
 
 	__webpack_require__(1);
 	__webpack_require__(5);
+	__webpack_require__(164);
+
 
 /***/ },
 /* 1 */
@@ -405,26 +407,30 @@
 		var React = __webpack_require__(6);
 		var ReactDOM = __webpack_require__(163);
 
-		ReactDOM.render(
-		  React.createElement('h1', null, 'Hello, world!'),
-		  document.getElementById('example')
-		);
-
-		var CommentBox = React.createClass({displayName: 'CommentBox',
+		var CommentList = React.createClass({displayName:"CommentList",
 		  render: function() {
 		    return (
-		      React.createElement('div', {className: "commentBox"},
-		        "Hello, world! I am a CommentBox."
+		    	React.createElement('div',{className: 'commentList'},
+		        'Hello, world! I am a CommentList.'
 		        )
 		    );
 		  }
 		});
 
-		ReactDOM.render(
-		  React.createElement(CommentBox, null),
-		  document.getElementById('content')
-		);
+		var CommentForm = React.createClass({
+		  render: function() {
+		    return (
+		    	React.createElement('div', {className:'commentForm'},
+		        'Hello, world! I am a CommentForm.'
+		        )
+		    );
+		  }
+		});
 
+		return {
+			CommentList : CommentList,
+			CommentForm : CommentForm
+		}
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
@@ -20027,6 +20033,38 @@
 
 	module.exports = __webpack_require__(8);
 
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5),__webpack_require__], __WEBPACK_AMD_DEFINE_RESULT__ = function(secondExample,require) {
+		var React = __webpack_require__(6);
+		var ReactDOM = __webpack_require__(163);
+		debugger;
+
+		var CommentBox = React.createClass({displayName: 'CommentBox',
+		  render: function() {
+		    return (
+		      React.createElement('div', {className: "commentBox"},
+		        "Hello, world! I am a CommentBox.",
+		        React.createElement(secondExample.CommentList,null),
+		        React.createElement(secondExample.CommentForm,null)
+		        )
+		    );
+		  }
+		});
+
+		ReactDOM.render(
+		  React.createElement(CommentBox, null),
+		  document.getElementById('content')
+		);
+
+		ReactDOM.render(
+		  React.createElement('h1', null, 'Hello, world!'),
+		  document.getElementById('example')
+		);
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ }
 /******/ ]);

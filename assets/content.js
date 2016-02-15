@@ -1,4 +1,4 @@
-define(function(require) {
+define(["./second-example","require"],function(secondExample,require) {
 	var React = require('react');
 	var ReactDOM = require('react-dom');
 
@@ -6,7 +6,9 @@ define(function(require) {
 	  render: function() {
 	    return (
 	      React.createElement('div', {className: "commentBox"},
-	        "Hello, world! I am a CommentBox."
+	        "Hello, world! I am a CommentBox.",
+	        React.createElement(secondExample.CommentList,null),
+	        React.createElement(secondExample.CommentForm,null)
 	        )
 	    );
 	  }
