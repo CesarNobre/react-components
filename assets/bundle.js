@@ -82,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\r\n    background: yellow;\r\n}", ""]);
+	exports.push([module.id, "body {\n    background: yellow;\n}", ""]);
 
 	// exports
 
@@ -404,6 +404,27 @@
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
 		var React = __webpack_require__(6);
 		var ReactDOM = __webpack_require__(163);
+
+		ReactDOM.render(
+		  React.createElement('h1', null, 'Hello, world!'),
+		  document.getElementById('example')
+		);
+
+		var CommentBox = React.createClass({displayName: 'CommentBox',
+		  render: function() {
+		    return (
+		      React.createElement('div', {className: "commentBox"},
+		        "Hello, world! I am a CommentBox."
+		        )
+		    );
+		  }
+		});
+
+		ReactDOM.render(
+		  React.createElement(CommentBox, null),
+		  document.getElementById('content')
+		);
+
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
