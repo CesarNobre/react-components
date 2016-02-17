@@ -65,8 +65,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./style.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -84,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    background: yellow;\n}", ""]);
+	exports.push([module.id, "body {\r\n    background: yellow;\r\n}", ""]);
 
 	// exports
 
@@ -20041,7 +20041,6 @@
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5),__webpack_require__], __WEBPACK_AMD_DEFINE_RESULT__ = function(secondExample,require) {
 		var React = __webpack_require__(6);
 		var ReactDOM = __webpack_require__(163);
-		debugger;
 
 		var CommentBox = React.createClass({displayName: 'CommentBox',
 		  render: function() {
